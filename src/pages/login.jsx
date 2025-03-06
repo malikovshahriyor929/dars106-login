@@ -10,6 +10,8 @@ const Login = () => {
       .post(`${import.meta.env.VITE_BASE_URL}/api/auth/sign-in`, { ...e })
       .then((res) => {
         navigate("/");
+        localStorage.setItem("token",res.data.data.token)
+        
       });
     // console.log(e);
   };
