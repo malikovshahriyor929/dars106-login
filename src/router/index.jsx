@@ -6,6 +6,7 @@ import Verify from "../pages/verify";
 import ForgotPassword from "../pages/forgotPassword";
 import ForgotVerify from "../pages/forgotVerify";
 import ForgotEmailCheck from "../pages/forgotEmailCheck";
+import Protect from "../pages/protect";
 
 let router = createBrowserRouter([
   {
@@ -14,7 +15,11 @@ let router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <Protect>
+        <Home />
+      </Protect>
+    ),
   },
   {
     path: "/register",
